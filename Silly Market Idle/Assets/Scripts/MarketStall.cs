@@ -15,12 +15,17 @@ public class MarketStall : MonoBehaviour
     void Start()
     {
         earningRate = baseEarningRate;
-        upgradeCost = (10 * level) * 1.1f ;
+        CalculateUpgradeCost();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Upgrading, Earning, Selling, Downgrading ? 
+    }
+
+    void CalculateUpgradeCost()
+    {
+        upgradeCost = (10 * level) * 1.1f;
     }
 }
