@@ -34,8 +34,16 @@ public class GameManager : MonoBehaviour
         {
             money -= stallCost;
             Debug.Log("Market Stall purchased!");
+            IncreaseStallCost();
         }
         else Debug.Log("Not enough money to purchase a new stall!");
+    }
+
+    public void IncreaseStallCost()
+    {
+        stallCost = Mathf.RoundToInt(stallCost * 1.3f);
+
+        Debug.Log($"Stall cost increased to: {stallCost}");
     }
 
     public void FixedUpdate()
