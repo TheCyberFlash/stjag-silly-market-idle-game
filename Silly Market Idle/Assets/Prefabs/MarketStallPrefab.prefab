@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7831327734781642631}
   - component: {fileID: -6335813938770546895}
   m_Layer: 0
-  m_Name: MarketStall
+  m_Name: MarketStallPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
