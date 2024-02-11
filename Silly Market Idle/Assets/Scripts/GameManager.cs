@@ -22,6 +22,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Logic for earning money over time
+    }
+
+    public void PurchaseStall()
+    {
+        // Logic for adding a new market stall
+    }
+
+    public void FixedUpdate()
+    {
+        // Logic for upgrading existing market stall (3 possible upgrades.. ? )
     }
 }
