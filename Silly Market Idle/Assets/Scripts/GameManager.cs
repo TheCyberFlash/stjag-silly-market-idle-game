@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public int stallCost = 10;
 
     public List<MarketStall> stalls = new List<MarketStall>();
+    public GameObject marketStallPrefab;
+
     private void Awake()
     {
         if (instance == null)
@@ -51,7 +53,7 @@ public class GameManager : MonoBehaviour
 
     public void CreateNewMarketStall()
     {
-        GameObject newStallObj = Instantiate(Resources.Load("MarketStallPrefab") as GameObject);
+        GameObject newStallObj = Instantiate(marketStallPrefab);
         MarketStall newStall = newStallObj.GetComponent<MarketStall>();
 
         stalls.Add(newStall);
