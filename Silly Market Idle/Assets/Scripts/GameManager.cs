@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public int money = 0;
+    public int stallCost = 10;
     private void Awake()
     {
         if (instance == null)
@@ -28,6 +30,12 @@ public class GameManager : MonoBehaviour
     public void PurchaseStall()
     {
         // Logic for adding a new market stall
+        if (money >= stallCost)
+        {
+            money -= stallCost;
+            Debug.Log("Market Stall purchased!");
+        }
+        else Debug.Log("Not enough money to purchase a new stall!");
     }
 
     public void FixedUpdate()
