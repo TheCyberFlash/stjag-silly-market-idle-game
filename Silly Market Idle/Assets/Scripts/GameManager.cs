@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
             money -= stallCost;
             Debug.Log("Market Stall purchased!");
             IncreaseStallCost();
+            CreateNewMarketStall();
         }
         else Debug.Log("Not enough money to purchase a new stall!");
     }
