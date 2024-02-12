@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        moneyString = money.ToString("F2");
+    }
+
     // Update is called once per frame
     void Update()
     {
