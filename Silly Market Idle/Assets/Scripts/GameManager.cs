@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
         stalls.Add(newStall);
     }
 
-    public void FixedUpdate()
+    public void Upgrade()
     {
         // Logic for upgrading existing market stall (3 possible upgrades.. ? )
     }
