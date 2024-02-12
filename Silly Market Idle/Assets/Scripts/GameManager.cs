@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         earnings = CalculateEarnings();
-        if (earnings < 0f)
+        if (earnings > 0f)
         {
             Debug.Log(earnings);
             IncreaseMoney(earnings);
