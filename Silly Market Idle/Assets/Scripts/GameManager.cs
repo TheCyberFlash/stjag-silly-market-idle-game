@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         moneyString = money.ToString("F2");
+        moneyText.text = $"Money: {moneyString}";
     }
 
     // Update is called once per frame
