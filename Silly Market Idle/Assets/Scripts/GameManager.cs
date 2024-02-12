@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public int money = 10;
+    public float money = 10;
+    public float earnings = 0f;
     public int stallCost = 10;
 
     public List<MarketStall> stalls = new List<MarketStall>();
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Logic for earning money over time
+        earnings = CalculateEarnings();
     }
 
     public void PurchaseStall()
@@ -62,5 +63,17 @@ public class GameManager : MonoBehaviour
     public void Upgrade()
     {
         // Logic for upgrading existing market stall (3 possible upgrades.. ? )
+    }
+
+    public float CalculateEarnings()
+    {
+        float totalEarnings = 0.0f;
+
+        foreach (MarketStall market in stalls)
+        {
+            totalEarnings += market.earningRate;
+        }
+
+        return totalEarnings;
     }
 }
