@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         earnings = CalculateEarnings();
         if (earnings > 0f)
         {
-            Debug.Log(earnings);
+            //Debug.Log(earnings);
             IncreaseMoney(earnings);
         }    
     }
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
     {
         money += earnings * Time.deltaTime;
         moneyString = money.ToString("F2");
-        Debug.Log($"Money: {moneyString}");
+        //Debug.Log($"Money: {moneyString}");
         moneyText.text = $"Money: {moneyString}";
     }
 }
