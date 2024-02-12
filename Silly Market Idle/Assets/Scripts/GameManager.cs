@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public float money = 10;
     public float earnings = 0f;
     public int stallCost = 10;
-
+    public string moneyString = string.Empty;
     public List<MarketStall> stalls = new List<MarketStall>();
     public GameObject marketStallPrefab;
 
@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseMoney(float earnings)
     {
         money += earnings * Time.deltaTime;
-        money = Mathf.Round(money * 100) / 100f; 
+        moneyString = money.ToString("F2");
+        Debug.Log($"Money: {moneyString}");
     }
 }
