@@ -30,6 +30,11 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         earnings = CalculateEarnings();
+        if (earnings < 0f)
+        {
+            Debug.Log(earnings);
+            IncreaseMoney(earnings);
+        }    
     }
 
     public void PurchaseStall()
@@ -75,5 +80,10 @@ public class GameManager : MonoBehaviour
         }
 
         return totalEarnings;
+    }
+
+    public void IncreaseMoney(float earnings)
+    {
+        money += earnings;
     }
 }
