@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public string moneyString = string.Empty;
     public List<MarketStall> stalls = new List<MarketStall>();
     public GameObject marketStallPrefab;
+    public TextMeshProUGUI moneyText;
 
     private void Awake()
     {
@@ -92,5 +94,6 @@ public class GameManager : MonoBehaviour
         money += earnings * Time.deltaTime;
         moneyString = money.ToString("F2");
         Debug.Log($"Money: {moneyString}");
+        moneyText.text = $"Money: {moneyString}";
     }
 }
