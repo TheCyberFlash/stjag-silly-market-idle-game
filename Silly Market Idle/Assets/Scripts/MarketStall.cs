@@ -5,11 +5,9 @@ using UnityEngine;
 public class MarketStall : MonoBehaviour
 {
     [SerializeField]
-    private int level = 1;
-    [SerializeField]
     private float baseEarningRate = 1.0f;
-    [SerializeField]
-    private float earningRate, upgradeCost;
+    public float earningRate, upgradeCost;
+    public int level = 1;
 
     // Start is called before the first frame update
     void Start()
