@@ -84,6 +84,6 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseMoney(float earnings)
     {
-        money += earnings;
+        money += earnings * Time.deltaTime;
     }
 }
