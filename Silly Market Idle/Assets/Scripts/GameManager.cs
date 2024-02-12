@@ -85,5 +85,6 @@ public class GameManager : MonoBehaviour
     public void IncreaseMoney(float earnings)
     {
         money += earnings * Time.deltaTime;
+        money = Mathf.Round(money * 100) / 100f; 
     }
 }
