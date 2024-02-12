@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public string moneyString = string.Empty;
     public List<MarketStall> stalls = new List<MarketStall>();
     public GameObject marketStallPrefab;
-    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI moneyText, newStallCost;
 
     private void Awake()
     {
@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     {
         moneyString = money.ToString("F2");
         moneyText.text = $"Money: {moneyString}";
+        newStallCost.text = $"New Stall Cost: {stallCost}";
     }
 
     // Update is called once per frame
@@ -61,7 +62,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseStallCost()
     {
         stallCost = Mathf.RoundToInt(stallCost * 1.3f);
-
+        newStallCost.text = $"New Stall Cost: {stallCost}";
         Debug.Log($"Stall cost increased to: {stallCost}");
     }
 
