@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public string moneyString = string.Empty;
     public List<MarketStall> stalls = new List<MarketStall>();
     public GameObject marketStallPrefab;
-    public TextMeshProUGUI moneyText, newStallCost;
+    public TextMeshProUGUI moneyText, newStallCost, stallCountText;
 
     private void Awake()
     {
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         moneyString = money.ToString("F2");
         moneyText.text = $"Money: {moneyString}";
         newStallCost.text = $"New Stall Cost: {stallCost}";
+        stallCountText.text = stalls.Count.ToString();
     }
 
     // Update is called once per frame
@@ -70,8 +71,10 @@ public class GameManager : MonoBehaviour
     {
         GameObject newStallObj = Instantiate(marketStallPrefab);
         MarketStall newStall = newStallObj.GetComponent<MarketStall>();
+        stallCountText.text = stalls.Count.ToString();
 
         stalls.Add(newStall);
+
     }
 
     public void Upgrade()
