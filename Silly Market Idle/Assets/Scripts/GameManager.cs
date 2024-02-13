@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         moneyString = money.ToString("F2");
         moneyText.text = $"Money: {moneyString}";
         newStallCost.text = $"New Stall Cost: {stallCost}";
-        stallCountText.text = $"Stall Count: {stalls.Count}";
+        stallCountText.text = $"Market Stalls: {stalls.Count}";
     }
 
     // Update is called once per frame
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
         MarketStall newStall = newStallObj.GetComponent<MarketStall>();
 
         stalls.Add(newStall);
-        stallCountText.text = $"Stall Count: {stalls.Count}";
+        stallCountText.text = $"Market Stalls: {stalls.Count}";
 
     }
 
