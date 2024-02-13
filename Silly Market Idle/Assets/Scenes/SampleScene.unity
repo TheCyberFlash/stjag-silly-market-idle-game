@@ -693,6 +693,7 @@ MonoBehaviour:
   marketStallPrefab: {fileID: 574972694176498816, guid: 859af100545fb244aa636a7b15eabbbe, type: 3}
   moneyText: {fileID: 1063096011}
   newStallCost: {fileID: 1617951658}
+  stallCountText: {fileID: 1646506417}
 --- !u!4 &1137861035
 Transform:
   m_ObjectHideFlags: 0
