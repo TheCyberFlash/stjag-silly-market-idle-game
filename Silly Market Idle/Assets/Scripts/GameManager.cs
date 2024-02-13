@@ -71,9 +71,9 @@ public class GameManager : MonoBehaviour
     {
         GameObject newStallObj = Instantiate(marketStallPrefab);
         MarketStall newStall = newStallObj.GetComponent<MarketStall>();
-        stallCountText.text = $"Stall Count: {stalls.Count}";
 
         stalls.Add(newStall);
+        stallCountText.text = $"Stall Count: {stalls.Count}";
 
     }
 
