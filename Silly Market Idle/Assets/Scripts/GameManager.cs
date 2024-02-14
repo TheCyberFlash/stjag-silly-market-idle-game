@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public GameObject marketStallPrefab;
     public TextMeshProUGUI moneyText, newStallCost, stallCountText;
 
+    public GameObject marketStallEntryPrefab;
+    public Transform contentPanel;
+
     private void Awake()
     {
         if (instance == null)
@@ -78,6 +81,10 @@ public class GameManager : MonoBehaviour
         newStall.title = $"Market Stall: {stalls.Count} - {newStall.level}";
 
         stallCountText.text = $"Market Stalls: {stalls.Count}";
+
+        GameObject newStallEntryObj = Instantiate(marketStallEntryPrefab, contentPanel);
+        TextMeshProUGUI newStallEntryText = newStallEntryObj.GetComponent<TextMeshProUGUI>();
+        newStallEntryText.text = newStall.title;
     }
 
     public void Upgrade()
