@@ -8,10 +8,12 @@ public class MarketStall : MonoBehaviour
     private float baseEarningRate = 1.0f;
     public float earningRate, upgradeCost;
     public int level = 1;
+    public string title;
 
     // Start is called before the first frame update
     void Start()
     {
+        title = $"Market Stall: 1 - {level}";
         earningRate = baseEarningRate;
         CalculateUpgradeCost();
     }
