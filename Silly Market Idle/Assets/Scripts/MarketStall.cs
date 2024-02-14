@@ -13,7 +13,6 @@ public class MarketStall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        title = $"Market Stall: 1 - {level}";
         earningRate = baseEarningRate;
         CalculateUpgradeCost();
     }
