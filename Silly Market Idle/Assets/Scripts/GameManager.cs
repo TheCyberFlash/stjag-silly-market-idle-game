@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -73,8 +74,11 @@ public class GameManager : MonoBehaviour
         MarketStall newStall = newStallObj.GetComponent<MarketStall>();
 
         stalls.Add(newStall);
-        stallCountText.text = $"Market Stalls: {stalls.Count}";
 
+        int index = stalls.IndexOf(newStall);
+        newStall.title = $"Market Stall: {index} - {newStall.level}";
+
+        stallCountText.text = $"Market Stalls: {stalls.Count}";
     }
 
     public void Upgrade()
