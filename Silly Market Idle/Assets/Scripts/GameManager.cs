@@ -75,8 +75,7 @@ public class GameManager : MonoBehaviour
 
         stalls.Add(newStall);
 
-        int index = stalls.IndexOf(newStall);
-        newStall.title = $"Market Stall: {index} - {newStall.level}";
+        newStall.title = $"Market Stall: {stalls.Count} - {newStall.level}";
 
         stallCountText.text = $"Market Stalls: {stalls.Count}";
     }
